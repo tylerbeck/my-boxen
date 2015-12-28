@@ -40,6 +40,7 @@ Repository {
   extra    => [
     '--recurse-submodules'
   ],
+  protocol => 'https',
   require  => File["${boxen::config::bindir}/boxen-git-credential"],
   config   => {
     'credential.helper' => "${boxen::config::bindir}/boxen-git-credential"
@@ -54,13 +55,13 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
-  }
-
-
-  file { "${boxen::config::srcdir}/our-boxen":
-    ensure => link,
-    target => $boxen::config::repodir
-  }
+  # if $::root_encrypted == 'no' {
+  #   fail('Please enable full disk encryption and try again')
+  # }
+  #
+  #
+  #file { "${boxen::config::srcdir}/our-boxen":
+  #   ensure => link,
+  #   target => $boxen::config::repodir
+  # }
 }

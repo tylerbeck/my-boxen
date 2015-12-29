@@ -1,0 +1,22 @@
+#!/bin/sh
+
+domain=localhost
+port=3128
+
+no_proxy="localhost,127.0.0.1"
+
+http_proxy="http://$domain:$port"
+https_proxy="https://$domain:$port"
+
+git config --global http.proxy $http_proxy
+git config --global https.proxy $https_proxy
+
+npm config set strict-ssl false
+npm config set proxy $http_proxy
+npm config set https-proxy $http_proxy
+
+apm config set strict-ssl false
+apm config set proxy $http_proxy
+apm config set https-proxy $http_proxy
+
+./script/boxen --debug

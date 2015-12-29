@@ -1,0 +1,49 @@
+  kroger_euid: kon4220
+  project_dir: Projects
+  default_node_version: 4.2.3
+boxen::personal::includes:
+  - atom
+  - git
+  - docker
+  - virtualbox
+boxen::personal::homebrew_packages:
+  - bash-completion
+  - node
+  - docker-machine
+boxen::personal::casks:
+  - appcleaner
+  - controlplane
+  - daisydisk
+  - firefox
+  - gitbox
+  - google-chrome
+  - graphicconverter
+  - kaleidoscope
+  - marked
+  - omnigraffle
+  - omnioutliner
+  - path-finder
+  - sketch
+  - dockertoolbox
+  - squidman
+  - transmit
+atom::packages:
+  - atom-chai-snippets
+  - color-picker
+  - colorful-json
+  - dash
+  - docblockr
+  - editorconfig
+  - es-identifier-highlight
+  - file-icons
+  - language-javascript-better
+  - linter
+  - linter-jscs
+  - linter-eslint
+  - minimap
+  - minimap-git-diff
+  - open-recent
+  - pigments
+  - pretty-json
+atom::themes:
+  - base16-syntax
